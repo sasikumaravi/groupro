@@ -1,0 +1,68 @@
+.main-nav{
+ display: flex;
+ height: 100px;
+ /* background-color:rgb(240, 241, 241) ; */
+ background-image: radial-gradient( circle 369px at -2.9% 12.9%,  rgba(247,234,163,1) 0%, rgba(236,180,238,0.56) 46.4%, rgba(163,203,247,1) 100.7% );
+ justify-content: space-evenly;
+}
+.sedan-sc-regular{
+  font-family: "Sedan SC", serif;
+  font-weight:bolder;
+  font-style: normal;
+} 
+
+.content1{ 
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  cursor: pointer;
+}
+
+.content2{
+  display: flex;
+  align-self: center;
+  
+}
+.content2 div{
+  margin: 10px;
+}
+.merriweather-light{
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.merriweather-light:hover{
+  cursor: pointer;
+}
+.next-content{
+  width: 1380px;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+  background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
+}
+.platypi{
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.form{
+  height: 330px;
+  text-align: center;
+  display: inline-block;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+input,textarea{
+  margin: 20px;
+  float:right;
+}
+label{
+  margin: 20px;
+  float: inline-start;
+}
+form button{
+  padding: 10px;
+  margin: 40px;
+  margin-top: 0px;
+}
