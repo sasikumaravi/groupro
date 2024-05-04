@@ -36,7 +36,6 @@
   cursor: pointer;
 }
 .next-content{
-  width: 1380px;
   display: flex;
   height: 500px;
   justify-content: space-between;
@@ -65,4 +64,40 @@ form button{
   padding: 10px;
   margin: 40px;
   margin-top: 0px;
+}
+.content1 a{
+  text-decoration: none;
+  color: black;
+}
+.active{
+ text-decoration: underline !important;
+}
+.abc-in{
+  text-align: center;
+  height: 300px;
+  width: 400px;
+  background-color: transparent;
+  border: 1px solid black;
+  /* margin: auto; */
+  margin-top: 100px;
+  margin-left: 600px;
+  box-shadow:rgb(211, 201, 201) 10px 10px 10px 10px;
+  border-radius: 10%;
+}
+.abc-in .bcd-in label{
+  float: left;
+}
+.abc-up{
+  text-align: center;
+  height: 300px;
+  width: 400px;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+}
+.abc-up .bcd-up label{
+  float: left;
+}
+.body{
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
 }
