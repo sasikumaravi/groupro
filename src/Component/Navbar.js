@@ -2,7 +2,9 @@ import React from 'react'
 import '../App.css';
 import img2 from './images-removebg-preview.png'
 import { NavLink } from 'react-router-dom';
-export default function Navbar() {
+import { useAuth } from './Auth';
+export default function Navbar(props) {
+    const auth=useAuth()
     return (
         <>
             <div className='main-nav'>
@@ -12,18 +14,14 @@ export default function Navbar() {
                 <div className='content1 sedan-sc-regular'>
                     <NavLink to='/'><div>Home</div></NavLink>
                     <NavLink to='/about'><div>About</div></NavLink>
-                    <NavLink to='/service'><div>Services</div></NavLink>
-                    
+                    <NavLink to='/service'><div>Services</div></NavLink>   
                 </div>
                 <div className='content2'>
-
-                    <NavLink to='signin'><div><button className='merriweather-light'>Sign in</button></div></NavLink>
-                    <NavLink to='signup'><div><button className='merriweather-light'>Sign up</button></div> </NavLink>
-
+                {!auth.user && (<div><NavLink to='signin'><button className='merriweather-light'>Log in</button></NavLink><NavLink to='signup'><button className='merriweather-light'>Register</button></NavLink></div>)} 
+                    {auth.user && <NavLink to='logout'><div><button className='merriweather-light'>Logout</button></div> </NavLink>} 
                 </div>
+               {auth.user && (<div><NavLink to='signin'><button className='merriweather-light'>Log in</button></NavLink><NavLink to='signup'><button className='merriweather-light'>Register</button></NavLink></div>)} 
             </div>
-
-
         </>
     )
 }

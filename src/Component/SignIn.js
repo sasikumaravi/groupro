@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import '../App.css';
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from './Auth';
+
 export default function SignIn() {
     const[mail,setMail]=useState('')
     const[password,setPassword]=useState('')
     const[list,setList]=useState([])
     const[errMsg,setErrMsg]=useState('')
     const navigate=useNavigate()
-    
+    const auth=useAuth()
     useEffect(()=>{
         axios.get("http://localhost:3001/users")
         .then(res=>{setList(res.data)})
@@ -18,6 +20,7 @@ export default function SignIn() {
     const user=list.find(x=>x.email===mail)
     if(user){
         if(user.password===password){
+            auth.login("hii")
             navigate('/main')
         }
         else{
@@ -40,7 +43,7 @@ export default function SignIn() {
             <label>Password</label>
             <input type='password' onChange={(e)=>{setPassword(e.target.value)
             }}/><br></br>
-            <button type='submit'>Log in</button>
+            <button className='log' type='submit'>Log in</button>
         </form><br></br>
         {errMsg}
     </div>

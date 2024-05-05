@@ -31,6 +31,7 @@
   font-family: "Merriweather", serif;
   font-weight: 300;
   font-style: normal;
+  margin-right: 10px;
 }
 .merriweather-light:hover{
   cursor: pointer;
@@ -47,11 +48,12 @@
   font-style: normal;
 }
 .form{
-  height: 330px;
+  height: 300px;
   text-align: center;
   display: inline-block;
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
+
 input,textarea{
   margin: 20px;
   float:right;
@@ -100,4 +102,16 @@ form button{
   width: 100vw;
   min-height: 100vh;
   background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+}
+.merriweather-light{
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: rgb(243, 200, 170);
+}
+.log{
+  background-color: #1bd39c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
